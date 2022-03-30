@@ -1,0 +1,28 @@
+{
+  "uid": "1299d386-525b-4032-98ae-1949f69f9cfc",
+  "kind": {
+    "group": "blablabla",
+    "kind": "Pod",
+    "version": "v1"
+  },
+  "object": {
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+      "name": "test-pod",
+      "namespace": "whatever",
+      "labels": {
+        "abc/cba": "123",
+        "owner": "team-alpha"
+      }
+    },
+    "spec": {
+      "containers": [
+        {
+          "name": "nginx",
+          "image": "nginx:latest"
+        }
+      ]
+    }
+  }
+}

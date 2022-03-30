@@ -8,12 +8,39 @@ contextAware: false
 executionMode: kubewarden-wapc
 annotations:
   io.kubewarden.policy.title: policy-name
-  io.kubewarden.policy.description: Short description
-  io.kubewarden.policy.author: policy-author
-  io.kubewarden.policy.url: https://github.com/yourorg/policy-name
-  io.kubewarden.policy.source: https://github.com/yourorg/policy-name
+  io.kubewarden.policy.description: Reject objects with palindrome labels
+  io.kubewarden.policy.author: Jorge Gaston
+  io.kubewarden.policy.url: https://github.com/jrggaston/kubewarden-palindrome-policy
+  io.kubewarden.policy.source: https://github.com/jrggaston/kubewarden-palindrome-policy
   io.kubewarden.policy.license: Apache-2.0
   io.kubewarden.policy.usage: |
-    Long explaination.
+    This policy rejects the creation of a Pod with palindrome labels.
 
-    **Note well:** this can be Markdown text
+    The policy allows the creation of this Pod:
+    ```
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: hello-world
+      labels:
+        env: production
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+    ```
+
+    And rejects the creation of this Pod:
+    ```
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: hello-world
+      labels:
+        env: production
+        level: debug
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+    ```
