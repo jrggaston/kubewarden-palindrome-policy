@@ -37,5 +37,6 @@ Requirements:
 - Keys of one unique character shall not be consider palindrome
 - If the key has prefix (<prefix>/<name>), both the key prefix and the key name shall be considered
 - The policy shall be case insensitive
+- The policy shall apply only to Pods
 
 
