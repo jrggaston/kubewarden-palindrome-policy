@@ -2,7 +2,7 @@
 
 This repository contains a Kubewarden policy written in Go to reject Pods with at least one label wiyh palindrome key.
 
-More information about Kubewarden and its policies can be found the [official documentation](https://docs.kubewarden.io)
+More information about Kubewarden and its policies can be found in the [official documentation](https://docs.kubewarden.io)
 
 The policy allows the creation of this Pod:
 ```
