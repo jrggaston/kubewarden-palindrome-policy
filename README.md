@@ -32,3 +32,10 @@ spec:
   - name: nginx
     image: nginx
 ```
+
+Requirements:
+- Keys of one unique character shall not be consider palindrome
+- If the key has prefix, both the key prefix and the key name shall be considered
+- The policy shall be case insensitive
+
+
