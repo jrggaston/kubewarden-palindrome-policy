@@ -48,7 +48,7 @@ func validate(payload []byte) ([]byte, error) {
         payload,
         "request.object.kind")
     
-    if strings.Contains(object.String(), "Pod") == false {
+    if strings.Contains(strings.ToLower(object.String()), "pod") == false {
         return kubewarden.AcceptRequest()
     }
 
